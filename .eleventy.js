@@ -1,9 +1,15 @@
+const TIME_ZONE = "America/Toronto";
+
+
 module.exports = (config) => {
     config.addPassthroughCopy('./src/static/')
     config.addCollection("posts", (collection) => {
-        return collection.getFilteredByGlob("./src/blog/*.md").sort((a, b) => {
+        return collection.getFilteredByGlob("./src/posts/*.md").sort((a, b) => {
             return (new Date(b.date) - new Date(a.date))
         })
+    })
+    config.addCollection("media", (collection) => {
+        return collection.getFilteredByGlob("./src/media/*.md")
     })
     return {
         markdownTemplateEngine: 'njk',

@@ -1,8 +1,2 @@
----
-title: 'Hello, world'
-layout: 'layouts/home.html'
----
-
-# Heading
-
-Hiii
+# My blog made using eleventy
+Not published yet lol

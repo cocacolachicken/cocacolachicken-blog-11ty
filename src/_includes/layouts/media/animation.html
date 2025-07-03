@@ -1,0 +1,10 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<h2>
+  {{ title }} ({{ year }})
+</h2>
+<span class="date-posted"> Last updated {{ updated.toLocaleString() }} </span>
+<article>
+  {{ content | safe }}
+</article>
+{% endblock %}

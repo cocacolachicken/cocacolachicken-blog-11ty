@@ -1,7 +1,7 @@
 ---
 title: Hello / Intro page
 description: Hello...
-date: 2025-06-26
+date: 2025-06-26T12:00:00.000Z
 layout: 'layouts/blog.html'
 ---
 

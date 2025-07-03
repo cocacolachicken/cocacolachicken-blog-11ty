@@ -1,0 +1,71 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<nav>
+<h2> Posts made by Tyler </h2>
+    {% set currentYear = "" %}
+    {% set currentMonth = "" %}
+    {% set monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] %}
+{% for post in collections.posts %}
+    {% if currentYear != post.date.getUTCFullYear() %}
+        {% if currentYear != "" %}
+        </ul></div></div>
+        {% endif %}
+    {% set currentYear = post.date.getUTCFullYear() %}
+    <div class="year-title"> {{ currentYear }} </div>
+        <div class="year">
+        {% set currentMonth = "" %}
+    {% endif %}
+
+    {% if currentMonth != post.date.getUTCMonth() %}
+    {% if currentMonth != "" %}
+        </div>
+    {% endif %}
+    {% set currentMonth = post.date.getUTCMonth() %}
+
+        <div class="month-title"> {{ monthNames[currentMonth] }} </div>
+        <div class="month {{ monthNames[currentMonth] }}">
+
+
+            <ul>
+    {% endif %}
+
+    <li><a href="{{ post.url }}">{{ post.data.title }}</a> <span class="date-posted"> posted {{ post.date.toUTCString().substring(0, 16) }} </span></li>
+{% endfor %}
+    </ul></div></div>
+</nav>
+
+{{ content | safe }}
+
+{% endblock %}
+
+{% block specificStyles %}
+<style>
+    .year  {
+        padding-left: 25px
+    }
+    .month {
+        padding-left: 25px
+    }
+
+    .year-title, .month-title {
+        font-size: 16pt;
+        margin: 10px 0;
+    }
+
+    .year-title {
+        margin-top: 20px
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin: 3px 0
+    }
+
+
+</style>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<h2> Media reviews </h2>
+<div>
+    {% for media in collections.media %}
+
+    <a href="{{ media.url }}">{{ media.data.title }}</a> <span class="date-posted"> last updated {{ media.data.updated.toLocaleDateString() }} </span> <br>
+    {% endfor %}
+</div>
+
+{% endblock %}
+

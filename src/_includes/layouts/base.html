@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
     {% include "partials/default-style.html" %}
+    {% block specificStyles %}
+    {% endblock %}
 </head>
 <body>
     {% include "partials/site-head.html" %}
