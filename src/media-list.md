@@ -1,6 +1,6 @@
 ---
 title: "Media List"
-layout: "layouts/hi.html"
+layout: "layouts/home.html"
 ---
 
 This is my media

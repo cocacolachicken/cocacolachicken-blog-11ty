@@ -25,6 +25,8 @@
         font-family: "Inter", "sans-serif";
     }
 
+
+
     @font-face {
         font-family: "Inter";
         src: url("/static/fonts/Inter-Regular.ttf"), url("/static/fonts/Inter-Italic.ttf");
@@ -32,10 +34,25 @@
 
     h1 {
         font-weight: bold;
-        margin: 20px 0 0;
+        margin: 0 0;
+    }
+
+    h2 {
+        font-weight: normal;
+        margin: 0 0;
     }
 
     nav {
         margin: 0 0 20px;
+    }
+
+    header {
+        margin: 20px 0 0;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .date-posted {
+        opacity: 60%
     }
 </style>

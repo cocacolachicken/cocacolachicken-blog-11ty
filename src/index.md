@@ -3,4 +3,8 @@ title: 'Tyler''s COOL blog'
 layout: 'layouts/home.html'
 ---
 
-This is tyler's COOL blog go to tyler's uncool blog if you're not cool
+![Intro](/images/header-2025-06-27)
+
+Hey! This is Tyler's blog. I'm a student at the University of Toronto 
+Scarboorugh Campus. I made this blog to keep track of my media, to have 
+somewhere to share my thoughts.   

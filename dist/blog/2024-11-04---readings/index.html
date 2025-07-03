@@ -31,6 +31,8 @@
         font-family: "Inter", "sans-serif";
     }
 
+
+
     @font-face {
         font-family: "Inter";
         src: url("/static/fonts/Inter-Regular.ttf"), url("/static/fonts/Inter-Italic.ttf");
@@ -38,28 +40,50 @@
 
     h1 {
         font-weight: bold;
-        margin: 20px 0 0;
+        margin: 0 0;
+    }
+
+    h2 {
+        font-weight: normal;
+        margin: 0 0;
     }
 
     nav {
         margin: 0 0 20px;
     }
+
+    header {
+        margin: 20px 0 0;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .date-posted {
+        opacity: 60%
+    }
 </style>
 </head>
 <body>
     <header>
-    <h1>Tyler's Blog</h1>
+    <div>
+        <h1>Tyler's Blog</h1>
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/media-list">My media</a> |
+            <a href="/posts">My blog</a> |
+            <a href="/portfolio">My portfolio</a>
+        </nav>
+    </div>
+    <div id="header-image">
+        <img src="/static/images/header-2025-06-27.jpg" alt="header image" height="50px" style="float:right">
+    </div>
 </header>
-<nav>
-    <a href="/">Home</a> |
-    <a href="/media-list">My media</a> |
-    <a href="/posts">Posts</a>
-</nav>
     <main id="main">
         
-<h1>
+<h2>
 2024-2025 Academic Year Personal Reading List
-</h1>
+</h2>
+<span class="date-posted">Posted on 11/3/2024, 7:00:00 PM</span>
 <p>~~~~~ Fall semester ~~~~<br>
 ☑️ Hateship, Friendship, Courtship, Loveship, Marriage by Alice Munro<br>
 ☑️ Notes from the Underground by Fyodor Dostoevsky <br>
