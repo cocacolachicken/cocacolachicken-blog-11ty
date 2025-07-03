@@ -1,6 +1,22 @@
 {% extends "layouts/base.html" %}
 {% block content %}
-<article>
+<h2>
+    {{ title }} ({{ year }})
+</h2>
+<div class="author">by {{ author }} </div>
+<span class="date-posted"> Last updated {{ updated.toLocaleString() }} </span>
+<div class="content">
     {{ content | safe }}
-</article>
+</div>
+{% endblock %}
+
+{% block specificStyles %}
+
+<style>
+    .author {
+        margin: -3px 0px 3px;
+        opacity: 75%
+    }
+</style>
+
 {% endblock %}

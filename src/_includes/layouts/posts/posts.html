@@ -1,7 +1,10 @@
 {% extends "layouts/base.html" %}
 {% block content %}
 <nav>
-<h2> Posts made by Tyler </h2>
+<h2> My blog posts... </h2>
+    <hr />
+
+
     {% set currentYear = "" %}
     {% set currentMonth = "" %}
     {% set monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] %}
@@ -29,7 +32,8 @@
             <ul>
     {% endif %}
 
-    <li><a href="{{ post.url }}">{{ post.data.title }}</a> <span class="date-posted"> posted {{ post.date.toUTCString().substring(0, 16) }} </span></li>
+    <li>
+        <a href="{{ post.url }}">{{ post.data.title }}</a> <span class="date-posted"> posted {{ post.date.toDateString() }} </span></li>
 {% endfor %}
     </ul></div></div>
 </nav>
@@ -49,7 +53,7 @@
 
     .year-title, .month-title {
         font-size: 16pt;
-        margin: 10px 0;
+        margin: 20px 0;
     }
 
     .year-title {

@@ -1,4 +1,3 @@
-const TIME_ZONE = "America/Toronto";
 
 
 module.exports = (config) => {
@@ -9,7 +8,7 @@ module.exports = (config) => {
         })
     })
     config.addCollection("media", (collection) => {
-        return collection.getFilteredByGlob("./src/media/*.md")
+        return collection.getFilteredByGlob("./src/media/*/*.md")
     })
     return {
         markdownTemplateEngine: 'njk',

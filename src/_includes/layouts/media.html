@@ -2,9 +2,22 @@
 {% block content %}
 <h2> Media reviews </h2>
 <div>
-    {% for media in collections.media %}
-
-    <a href="{{ media.url }}">{{ media.data.title }}</a> <span class="date-posted"> last updated {{ media.data.updated.toLocaleDateString() }} </span> <br>
+    {% for type, medias in collections.media | groupby("data.type") %}
+    <div>
+        <h3>
+        {{ type }}
+        </h3>
+        {% for media in medias %}
+        <li>
+            <a href="{{ media.url }}">
+                {{ media.data.title }}</a>
+            <span class="date-posted">
+                last updated {{ media.data.updated.toLocaleDateString() }}
+            </span>
+            <br>
+        </li>
+        {% endfor %}
+    </div>
     {% endfor %}
 </div>
 
